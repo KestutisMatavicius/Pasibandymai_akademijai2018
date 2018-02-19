@@ -9,7 +9,7 @@ namespace EF.models
             Post = new HashSet<Post>();
         }
 
-        public int BlogId { get; set; }
+        public int Id { get; set; }
         public string Url { get; set; }
 
         public ICollection<Post> Post { get; set; }

@@ -23,7 +23,7 @@ namespace EF.context
         public List<Blog> GetAll()
         {
             var lit = _rt.Blog.Include(c => c.Post).ToList();
-            return lit.ToList();
+            return lit;
         }
     }
 }

@@ -1,7 +1,6 @@
 ﻿using AutoMapper;
 using EF.Automapper.Dto;
 using EF.context;
-using EF.models;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 
@@ -24,30 +23,9 @@ namespace nrd_akademija_2018.Controllers
         public List<BlogDto> Get()
         {
             var list = _rt.GetAll();
-            List<BlogDto> blogDto = new List<BlogDto>();
 
-            blogDto = _iMapper.Map<List<BlogDto>>(list);
-
-
-
-            /*Blog kl = new Blog();
-
-            var lis = new List<Blog>();
-            kl.BlogId = 1;
-            kl.Url = "lkj";
-
-            Post p1 = new Post();
-
-            p1.BlogId = 1;
-            p1.PostId = 1;
-            p1.Title = "Post1";
-            kl.Post.Add(p1);
-            lis.Add(kl);*/
-            //return lis;
-
+            var blogDto = _iMapper.Map<List<BlogDto>>(list);
             return blogDto;
-
-
 
         }
 
@@ -62,9 +40,6 @@ namespace nrd_akademija_2018.Controllers
         [HttpPost]
         public void Post()
         {
-
-
-            //BlogContext kk = new BlogContext();
             _rt.Addnew();
         }
 
