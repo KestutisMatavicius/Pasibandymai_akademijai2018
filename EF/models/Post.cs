@@ -7,6 +7,6 @@
         public string Content { get; set; }
         public string Title { get; set; }
 
-        public Blog Blog { get; set; }
+        public virtual Blog Blog { get; set; }
     }
 }

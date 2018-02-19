@@ -1,4 +1,9 @@
-﻿namespace EF.context
+﻿using EF.models;
+using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace EF.context
 {
     public class BlogContext : IBlogContext
     {
@@ -15,6 +20,10 @@
             _rt.SaveChanges();
         }
 
-
+        public List<Blog> GetAll()
+        {
+            var lit = _rt.Blog.Include(c => c.Post).ToList();
+            return lit.ToList();
+        }
     }
 }

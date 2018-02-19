@@ -1,4 +1,7 @@
-﻿using EF.context;
+﻿using AutoMapper;
+using EF.Automapper.Dto;
+using EF.context;
+using EF.models;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 
@@ -8,17 +11,44 @@ namespace nrd_akademija_2018.Controllers
     public class ValuesController : Controller
     {
         protected readonly IBlogContext _rt;
+        private readonly IMapper _iMapper;
 
-        public ValuesController(IBlogContext rt)
+        public ValuesController(IBlogContext rt, IMapper iMapper)
         {
             _rt = rt;
+            _iMapper = iMapper;
 
         }
         // GET api/values
         [HttpGet]
-        public IEnumerable<string> Get()
+        public List<BlogDto> Get()
         {
-            return new string[] { "value1", "value2" };
+            var list = _rt.GetAll();
+            List<BlogDto> blogDto = new List<BlogDto>();
+
+            blogDto = _iMapper.Map<List<BlogDto>>(list);
+
+
+
+            /*Blog kl = new Blog();
+
+            var lis = new List<Blog>();
+            kl.BlogId = 1;
+            kl.Url = "lkj";
+
+            Post p1 = new Post();
+
+            p1.BlogId = 1;
+            p1.PostId = 1;
+            p1.Title = "Post1";
+            kl.Post.Add(p1);
+            lis.Add(kl);*/
+            //return lis;
+
+            return blogDto;
+
+
+
         }
 
         // GET api/values/5
