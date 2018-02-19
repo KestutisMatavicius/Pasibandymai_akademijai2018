@@ -1,14 +1,13 @@
 ﻿using EF.models;
-using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace EF.context
+namespace EF.repository
 {
-    public class BlogContext : IBlogContext
+    public class BlogRepository : IBlogRepository
     {
         protected readonly NrdAkademijaDbContext _rt;
-        public BlogContext(NrdAkademijaDbContext rt)
+        public BlogRepository(NrdAkademijaDbContext rt)
         {
             _rt = rt;
 
@@ -22,7 +21,7 @@ namespace EF.context
 
         public List<Blog> GetAll()
         {
-            var lit = _rt.Blog.Include(c => c.Post).ToList();
+            var lit = _rt.Blog/*.Include(c => c.Post)*/.ToList();
             return lit;
         }
     }

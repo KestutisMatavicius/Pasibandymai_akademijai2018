@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using EF;
 using EF.Automapper;
-using EF.context;
+using EF.repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -24,7 +24,7 @@ namespace nrd_akademija_2018
         {
             services.AddDbContext<NrdAkademijaDbContext>(options =>
         options.UseSqlServer(Configuration.GetConnectionString("AkademijaDatabase")));
-            services.AddScoped<IBlogContext, BlogContext>();
+            services.AddScoped<IBlogRepository, BlogRepository>();
             services.AddAutoMapper(x => x.AddProfile(new MappingsProfile()));
             services.AddMvc();
         }
