@@ -1,4 +1,5 @@
 ﻿using EF.models;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -21,7 +22,7 @@ namespace EF.repository
 
         public List<Blog> GetAll()
         {
-            var lit = _rt.Blog/*.Include(c => c.Post)*/.ToList();
+            var lit = _rt.Blog.Include(c => c.Post).ToList();
             return lit;
         }
     }

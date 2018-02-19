@@ -24,3 +24,4 @@ C:\Users\kma\Desktop\Akademijai_2018\Pasibandymai_akademijai2018\nrd_akademija_2
 C:\Users\kma\Desktop\Akademijai_2018\Pasibandymai_akademijai2018\nrd_akademija_2018\obj\Debug\netcoreapp2.0\nrd_akademija_2018.AssemblyInfo.cs
 C:\Users\kma\Desktop\Akademijai_2018\Pasibandymai_akademijai2018\nrd_akademija_2018\obj\Debug\netcoreapp2.0\nrd_akademija_2018.dll
 C:\Users\kma\Desktop\Akademijai_2018\Pasibandymai_akademijai2018\nrd_akademija_2018\obj\Debug\netcoreapp2.0\nrd_akademija_2018.pdb
+C:\Users\kma\Desktop\Akademijai_2018\Pasibandymai_akademijai2018\nrd_akademija_2018\bin\Debug\netcoreapp2.0\nlog.config

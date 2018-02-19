@@ -14,8 +14,6 @@ namespace nrd_akademija_2018
 
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-
-
                 .UseStartup<Startup>()
                 .Build();
     }

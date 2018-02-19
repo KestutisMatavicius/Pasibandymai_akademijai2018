@@ -17,6 +17,8 @@ namespace nrd_akademija_2018.Controllers
             _rt = rt;
             _iMapper = iMapper;
         }
+
+
         // GET api/values
         [HttpGet]
         public List<BlogDto> Get()
@@ -26,12 +28,15 @@ namespace nrd_akademija_2018.Controllers
             return blogDto;
         }
 
+
+
         // GET api/values/5
         [HttpGet("{id}")]
         public string Get(int id)
         {
             return "value";
         }
+
 
         // POST api/values
         [HttpPost]
@@ -40,11 +45,13 @@ namespace nrd_akademija_2018.Controllers
             _rt.Addnew();
         }
 
+
         // PUT api/values/5
         [HttpPut("{id}")]
         public void Put(int id, [FromBody]string value)
         {
         }
+
 
         // DELETE api/values/5
         [HttpDelete("{id}")]
