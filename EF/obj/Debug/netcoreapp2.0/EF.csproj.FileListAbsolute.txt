@@ -19,3 +19,4 @@ C:\Users\kma\Desktop\Akademijai_2018\Pasibandymai_akademijai2018\EF\obj\Debug\ne
 C:\Users\kma\Desktop\Akademijai_2018\Pasibandymai_akademijai2018\EF\obj\Debug\netcoreapp2.0\EF.AssemblyInfo.cs
 C:\Users\kma\Desktop\Akademijai_2018\Pasibandymai_akademijai2018\EF\obj\Debug\netcoreapp2.0\EF.dll
 C:\Users\kma\Desktop\Akademijai_2018\Pasibandymai_akademijai2018\EF\obj\Debug\netcoreapp2.0\EF.pdb
+C:\Users\kma\Desktop\Akademijai_2018\Pasibandymai_akademijai2018\EF\obj\Debug\netcoreapp2.0\EF.csprojResolveAssemblyReference.cache
